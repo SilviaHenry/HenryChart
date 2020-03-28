@@ -1,0 +1,59 @@
+body {
+    background-color: blue;
+    margin-left: 20px;
+    font-family: arial, sans-serif;
+}
+
+h1 {
+    color: black;
+    font-size: 20px;
+}
+
+#h1-div {
+    background-color: #fcff4a;
+}
+
+.HC-main-content-div {
+    padding-top:70px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: floralwhite;
+}
+
+#table-header {
+    background-color: rgba(214, 212, 72, 0.43);
+    border-top: 5px solid #af7d65;
+}
+
+.HC-tasks-col {
+    width: 200px;
+}
+
+.HC-resources-col {
+    width: 200px;
+}
+
+.HC-calendar-cell-pasive {
+    background-color: white;
+}
+
+.HC-calendar-cell-active {
+    background-color: red;
+}
+
+.HC-calendar-cell-inbetween {
+    background-color: green;
+}

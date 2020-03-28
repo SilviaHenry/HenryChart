@@ -1,0 +1,45 @@
+doctype html
+html
+    head
+      title
+        =@title + ' | HenryChart'
+      meta name="keywords" content="Gantt chart"
+      meta name="author" content="Silvia Balogova"
+      meta charset="utf-8"
+      link rel="stylesheet" type="text/css" href="css/simple.css"
+      link rel="stylesheet" type="text/css" href="css/template.css"
+
+      //javascript:
+          alert('Welcome to HenryChart')
+
+
+    body class="w3-white"
+      header
+        div class="w3-bar w3-top w3-yellow w3-large" style="z-index:4"
+          h1
+            | Henry Chart
+
+      div id="HC-main-content"
+
+      #main
+        - if flash[:notice]
+          p.notice= flash[:notice]
+        - if flash[:error]
+          p.error
+            = flash[:error]
+
+
+        == yield
+
+      p ----------------
+      p I am a footer.
+      footer
+        p
+          | Henry Chart 2020
+
+
+      script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"
+      script src="/js/application.js"
+
+
+
