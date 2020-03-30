@@ -10,7 +10,7 @@ $(document).ready(function(){
             return;
         }
         var data = {dateFrom:$dateFrom.val(), dateTo:$dateTo.val()};
-        $.post( "/home", data, function( data ) {
+        $.post( "/", data, function( data ) {
             $("<p>" + data + "</p>").insertAfter($button);
         }, "text");
     });

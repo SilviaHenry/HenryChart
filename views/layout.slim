@@ -9,31 +9,27 @@ html
       link rel="stylesheet" type="text/css" href="css/simple.css"
       link rel="stylesheet" type="text/css" href="css/template.css"
 
-      //javascript:
-          alert('Welcome to HenryChart')
-
-
-    body class="w3-white"
+    body
       header
         div class="w3-bar w3-top w3-yellow w3-large" style="z-index:4"
           h1
             | Henry Chart
 
-      div id="HC-main-content"
+        //div id="HC-main-content"
 
-      #main
-        - if flash[:notice]
-          p.notice= flash[:notice]
-        - if flash[:error]
-          p.error
-            = flash[:error]
+      div id="HC-main-container-div"
+          div id="HC-content-wrap"
 
+          #main
+            - if flash[:notice]
+              p.notice= flash[:notice]
+            - if flash[:error]
+              p.error
+                = flash[:error]
 
-        == yield
+            == yield
 
-      p ----------------
-      p I am a footer.
-      footer
+      footer id="HC-footer"
         p
           | Henry Chart 2020
 

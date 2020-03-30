@@ -169,7 +169,7 @@ class HenryChart < Sinatra::Application
     ]
 
     date_from = Date.parse("01/04/2020")
-    date_to = Date.parse("10/04/2020")
+    date_to = Date.parse("30/04/2020")
     @days = []
     while date_from <= date_to do
       @days.append(date_from)

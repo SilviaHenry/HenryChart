@@ -1,5 +1,5 @@
 body {
-    background-color: blue;
+    background-color: white;
     margin-left: 20px;
     font-family: arial, sans-serif;
 }
@@ -13,14 +13,20 @@ h1 {
     background-color: #fcff4a;
 }
 
-.HC-main-content-div {
-    padding-top:70px;
+#HC-main-container-div {
+    position: relative;
+    min-height: 100vh;
+    padding-top:37px;
+}
+#HC-content-wrap {
+    padding-bottom: 2.5rem;
 }
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    table-layout: auto;
 }
 
 td, th {
@@ -35,7 +41,7 @@ tr:nth-child(even) {
 
 #table-header {
     background-color: rgba(214, 212, 72, 0.43);
-    border-top: 5px solid #af7d65;
+    /*border-top: 5px solid #af7d65;*/
 }
 
 .HC-tasks-col {
@@ -56,4 +62,18 @@ tr:nth-child(even) {
 
 .HC-calendar-cell-inbetween {
     background-color: green;
+}
+.HC-time-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.HC-time-view {
+    width: 500px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
 }

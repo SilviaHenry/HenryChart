@@ -1,23 +1,23 @@
-div class="HC-main-content-div"
 
   #content
-    table class="HC-chart-table" id="HC-table"
-      tr#table-header
-        th.HC-tasks-col
-        th.HC-resources-col
-        th
-          input name="dateFrom" type="text"
-          input name="dateTo" type="text"
-          button submit
 
+      / tr
+      /   th.HC-tasks-col
+      /   th.HC-resources-col
+      /   th
+      /     input name="dateFrom" type="text"
+      /     input name="dateTo" type="text"
+      /     button submit
+  div class="HC-time-scroll"
+    table class="HC-chart-table" id="HC-table"
       / Calendar row
-      tr
+      tr#table-header
         th Tasks
         th Resources
         th Start date
         th End date
         - @days.each do |day|
-          th #{day}
+          th #{day.day}
 
       / Task loop
       - @tasks.each do |tas|
@@ -26,9 +26,10 @@ div class="HC-main-content-div"
           td #{tas[:resources]}
           td #{tas[:start_date]}
           td #{tas[:end_date]}
+          / Scroll bar for time view
+          div class="HC-time-view"
           - @days.each do |day|
-            //td #{tas[""]}
             - if day >= tas[:start_date] && day <= tas[:end_date]
-              td class="HC-calendar-cell-active" ongoing
+              td class="HC-calendar-cell-active"
             - else
-              td class="HC-calendar-cell-pasive" not active
+              td class="HC-calendar-cell-pasive"
